@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- Coding by CodingFire - youtube.com/codingfire -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Split Cards Effect | Coding Fire</title>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <img src="one.jpeg" alt="">
+    </div>
+    <div class="card">
+      <img src="two.jpeg" alt="">
+    </div>
+    <div class="card">
+      <img src="three.jpeg" alt="">
+    </div>
+  </div>
+
+  <script>
+    // i will try to make it easier for you
+    // getting the first card
+    let cards = document.querySelector('.card');
+    cards.addEventListener('click', () => {
+      // we are telling that when we click on the card add and also make it toggle this CLASS to the card
+      cards.classList.toggle('split');
+    })
+  </script>
+
+</body>
+</html>

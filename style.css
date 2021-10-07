@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  background: #252244;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card {
+  position: absolute;
+  width: 350px;
+  height: 520px;
+  border-radius: 10px;
+  padding: 10px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  /* smoothhhhhh effect */
+  transition: 0.4s ease;
+}
+/* getting first card */
+.card:nth-child(1) {
+  z-index: 99;
+  cursor: pointer;
+}
+/* getting second card */
+.card:nth-child(2) {
+  transform: rotate(-5deg);
+}
+/* getting third card */
+.card:nth-child(3) {
+  transform: rotate(5deg);
+}
+
+/* Now the simple part and the important part :) */
+.card.split ~ .card:nth-child(2) {
+  transform: translateX(-115%);
+}
+.card.split ~ .card:nth-child(3) {
+  transform: translateX(115%);
+}
